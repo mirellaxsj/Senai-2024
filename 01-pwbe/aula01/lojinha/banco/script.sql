@@ -1,23 +1,24 @@
 -- DDL - Estrutura
-drop database if exists lojinha;
-create database lojinha;
-use lojinha;
-create table Clientes(
+drop database if exists papelaria;
+create database papelaria;
+use papelaria;
+create table Produtos(
     id integer primary key auto_increment,
-    cpf varchar(20) not null unique,
-    nome varchar(50) not null,
-    sobrenome varchar(50) not null,
-    nascimento date not null
+    produto varchar(50) not null,
+    quantidade integer(4) not null,
+    descricao varchar(150) not null,
+    preco float(3,2) not null
+    
 );
-describe Clientes;
+describe Produtos;
 
 -- DML - Popular com dados de teste
-insert into Clientes(cpf, nome, sobrenome, nascimento)
+insert into Produtos(produto,quantidade, descricao, preco)
 values
-("111.111.111-11","Jair","Silva","1980-01-01"),
-("222.222.222-22","Jafoi","Solza","1990-02-25"),
-("333.333.333-33","Javai","Santos","1985-03-18"),
-("444.444.444-44","Jaera","Silveira","1982-04-13"),
-("555.555.555-55","Jacinto","Pena","2005-05-15");
+("Borracha",344,"Borracha branca Faber Castell",3.99),
+("Caneta azul",1000,"Caneta Bic azul",1.99),
+("Caneta preta",1000,"Caneta Bic preta",1.99),
+("Lápiseira",478,"Lápiseira 2.0 Faber Castell",6.99),
+("Cola",754,"Cola líquida",5.99);
 
-select * from Clientes;
+select * from Produtos;

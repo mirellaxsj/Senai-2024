@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const con = mysql.createConnection({
     user: 'root',
     host: 'localhost',
-    database: 'lojinha'
+    database: 'papelaria'
 });
 
 //Rota de teste
@@ -18,23 +18,23 @@ const teste = (req, res) => {
 
 //CRUD - create
 const create = (req, res) => {
-    let cpf = req.body.cpf;
-    let nome = req.body.nome;
-    let sobrenome = req.body.sobrenome;
-    let nascimento = req.body.nascimento;
-    let query = `INSERT INTO clientes(cpf, nome, sobrenome, nascimento) VALUE`;
-    query += `('${cpf}', '${nome}', '${sobrenome}', '${nascimento}');`;
+    let produto = req.body.produto;
+    let quantidade = req.body.quantidade;
+    let descricao = req.body.descricao;
+    let preco = req.body.preco;
+    let query = `INSERT INTO Produtos(produto, quantidade, descricao, preco) VALUE`;
+    query += `('${produto}', '${quantidade}', '${descricao}', '${preco}');`;
     con.query(query,(err, result)=>{
         if(err)
-            res.redirect("http://127.0.0.1:5500/front/erro.html?erro=Provalmente o CPF já está cadastrado&err="+err.code);
+            res.redirect("http://127.0.0.1:5500/lojinha/front/erro.html?erro=Provalmente o produto já está cadastrado&err="+err.code);
         else
-            res.redirect("http://127.0.0.1:5500/front/index.html");
+            res.redirect("http://127.0.0.1:5500/lojinha/front/index.html");
     });
 }
 
 //CRUD - Read
 const read = (req, res) => {
-    con.query("SELECT * FROM Clientes ORDER BY id DESC",(err, result)=>{
+    con.query("SELECT * FROM Produtos ORDER BY id DESC",(err, result)=>{
         if(err)
             res.json(err);
         else

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Lojinha</title>
+    <title>Papelaria</title>
 </head>
 <body>
     <header>
@@ -19,9 +19,9 @@
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>CPF</th>
-                    <th>Nome completo</th>
-                    <th>Nascimento</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
                 </tr>
             </thead>
             <tbody id="dados">
@@ -39,9 +39,10 @@
                 dados.innerHTML += `
                     <tr>
                         <td>${cli.id}</td>
-                        <td>${cli.cpf}</td>
-                        <td>${cli.nome} ${cli.sobrenome}</td>
-                        <td>${cli.nascimento}</td>
+                        <td>${cli.produto}</td>
+                        <td>${cli.quantidade} </td>
+                        <td>${cli.descricao}</td>
+                        <td>${cli.preco}</td>
                     </tr>
                 `;
             });
