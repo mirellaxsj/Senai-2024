@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +12,7 @@ body{
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: #f5f5f5;
+    background: rgb(161, 159, 159);
 }
 
 
@@ -22,21 +24,37 @@ nav{
     align-items: center;
 }
 
+.logo{
+    color: #fff
+}
+
+.cadastro{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.enviar{
+    color: #fff;
+    background: #d5175d;
+}
+
 a{
     text-decoration: none;
     color: #fff;
     background: #d5175d;
     padding: 10px 20px;
-    border-radius: 5px;
+    border: #fff 3px solid;
+    border-radius: 20px;
     transition: 0.2s;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 header{
     width: 100%;
     padding: 20px 0;
     background: #d5175d;;
-}
+} 
 
 main{
     width: 100%;
@@ -48,13 +66,13 @@ main{
     align-items: center;
 }
 
-footer{
+/* footer{
     width: 100%;
     padding: 20px;
     background: #d5175d;-;
     color: #fff;
     text-align: center;
-}
+} */
 
 table{
     width: 100%;

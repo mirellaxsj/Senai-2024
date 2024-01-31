@@ -8,19 +8,21 @@
 </head>
 <body>
     <header>
-        <h1>Cadastro de Produtos</h1>
+        <nav>
+            <h2 class="logo">Papelaria Estrela</h2>
+            <a href="./index.html">Listar todos</a>
+            <a href="./form.html">Cadastrar</a>
+        </nav>
     </header>
-    <nav>
-        <a href="./index.html">Listar todos</a>
-        <a href="./form.html">Cadastrar</a>
-    </nav>
+
     <main>
         <form action="http://localhost:3000/clientes" method="post">
+            <h3 class="cadastro">Cadastro de Produtos</h3>
             <input type="text" name="produto" placeholder="produto" required>
             <input type="number" name="quantidade" placeholder="quantidade" required>
             <input type="text" name="descricao" placeholder="descrição" required>
             <input type="float" name="preco" placeholder="preço" required>
-            <input type="submit" value="Enviar">
+            <input class="enviar" type="submit" value="Enviar">
         </form>
     </main>
     <footer>
