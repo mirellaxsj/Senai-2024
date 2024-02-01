@@ -52,8 +52,8 @@ a{
 
 header{
     width: 100%;
-    padding: 20px 0;
-    background: #d5175d;;
+    padding: 10px 0;
+    background: #d5175d;
 } 
 
 main{
@@ -81,7 +81,7 @@ table{
 }
 
 tr:nth-child(even){
-    background: #ffdddd;
+    background: #d5175d;
 }
 
 tr{
@@ -91,6 +91,10 @@ tr{
 th, td{
     padding: 10px 20px;
     text-align: left;
+    color:#fff;
+}
+th{
+    font-size: 20px;
 }
 
 h1{
@@ -99,8 +103,8 @@ h1{
 }
 
 form{
-    width: 100%;
-    max-width: 500px;
+    width: 400px;
+    height: 500px;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
@@ -113,4 +117,18 @@ input, textarea{
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.nome {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.img{
+    width: 130px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+  
 }

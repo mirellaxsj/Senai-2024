@@ -8,12 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>Listar todos os clientes</h1>
+        <nav>
+            <h1>Listar todos os clientes</h1>
+            <a href="./index.html">Listar todos</a>
+            <a href="./form.html">Cadastrar</a>
+        </nav>
     </header>
-    <nav>
+    <!-- <nav>
         <a href="./index.html">Listar todos</a>
         <a href="./form.html">Cadastrar</a>
-    </nav>
+    </nav> -->
     <main>
         <table>
             <thead>
@@ -21,6 +25,7 @@
                     <th>id</th>
                     <th>Produto</th>
                     <th>Quantidade</th>
+                    <th>Descrição</th>
                     <th>Preço</th>
                 </tr>
             </thead>
@@ -28,7 +33,7 @@
             </tbody>
         </table>
     </main>
-    <footer>by Mirella</footer>
+    <footer></footer>
 </body>
 <script>
     const dados = document.getElementById('dados');
