@@ -36,4 +36,31 @@ export default [
         ],
         
     },
+    {
+        question: "Quanto é 40 + 9?",
+        answers: [
+            {option: "49", correct:true},
+            {option: "50", correct:false},
+            {option: "51", correct:false},
+        ],
+        
+    },
+    {
+        question: "Quanto é 1 x 7?",
+        answers: [
+            {option: "49", correct:true},
+            {option: "50", correct:false},
+            {option: "51", correct:false},
+        ],
+        
+    },
+    {
+        question: "Quanto é 8 x 7?",
+        answers: [
+            {option: "49", correct:true},
+            {option: "50", correct:false},
+            {option: "51", correct:false},
+        ],
+        
+    },
 ];

@@ -18,11 +18,36 @@ const read = async (req, res) => {
     const destinos = await prisma.destinos.findMany({
         include: {
             hoteis: true,
-            pontoTuristicos: true
+            pontoTuristico: true
         }
     });
 
     res.status(200).json(destinos).end();
+}
+
+const readById = async (req, res) => {
+    const destino = await prisma.destinos.findUnique({
+        where : {
+            id : Number(req.params.id)
+        },
+        include : {
+            hoteis: true,
+            pontoTuristico: true
+        }
+    });
+
+    res.status(200).json(destino).end();
+}
+
+const readByCidade = async (req, res) => {
+    const { cidade } = req.params.cidade;
+    const destino = await prisma.destinos.findMany({
+        where: { cidade: {
+            contains: cidade
+        }}  
+    });
+
+    res.status(200).json(destino).end();
 }
 
 const remove = async (req, res) => {
@@ -54,6 +79,37 @@ const update = async (req, res) => {
 module.exports = {
     create,
     read,
+    readById,
+    readByCidade,
     remove,
     update
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Mirella França

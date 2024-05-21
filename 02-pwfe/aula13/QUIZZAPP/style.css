@@ -25,7 +25,7 @@ main {
     padding: 10px;
     border-radius: 10px;
     width: 100%;
-    max-width: 300px;
+    max-width: 600px;
     min-width: 200px;
     display: flex;
     align-items: center;
@@ -57,7 +57,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #000CCC;
+    background-color: #d64258;
     color: whitesmoke;
 }
 

@@ -21,13 +21,13 @@ const read = async (req, res) => {
 }
 
 const remove = async (req, res) => {
-    const pontoTuristico = await prisma.pontosTuristicos.delete({
+    const pontosTuristicos = await prisma.pontosTuristicos.delete({
         where: {
             id: Number(req.params.id)
         }
     });
 
-    res.status(200).json(pontoTuristico).end();
+    res.status(200).json(pontosTuristicos).end();
 }
 
 //param id

@@ -13,21 +13,23 @@ router.get('/', (req, res) => {
 //Destinos
 router.post('/destinos', destinos.create);
 router.get('/destinos', destinos.read);
-router.delete('/destinos/:id', destinos.remove);
-router.put('/destinos/', destinos.update);
+router.get('/destinos/id/:id', destinos.readById);
+router.get('/destinos/cidade/:cidade', destinos.readByCidade);
+router.delete('/destinos/id/:id', destinos.remove);
+router.put('/destinos/id/:id', destinos.update);
 
 
 //Hoteis
 router.post('/hoteis', hoteis.create);
 router.get('/hoteis', hoteis.read);
 router.delete('/hoteis/:id', hoteis.remove);
-router.put('/hoteis/', hoteis.update);
+router.put('/hoteis/:id', hoteis.update);
 
 
 //Pontos Turisticos
 router.post('/pontosTuristicos', pontosTuristicos.create);
 router.get('/pontosTuristicos', pontosTuristicos.read);
-router.delete('pontosTuristicos/:id', pontosTuristicos.remove);
-router.put('/pontosTuristicos/', pontosTuristicos.update);
+router.delete('/pontosTuristicos/:id', pontosTuristicos.remove);
+router.put('/pontosTuristicos/:id', pontosTuristicos.update);
 
 module.exports = router;
